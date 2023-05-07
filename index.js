@@ -1,7 +1,6 @@
 import express from "express";
 import jsonServer from "json-server";
 import auth from "json-server-auth";
-import serverlessHttp from "serverless-http";
 
 const server = express();
 server.use((req, res, next) => {
@@ -27,5 +26,4 @@ server.use(auth)
 server.use(middlewares)
 server.use(router)
 
-// Export the handler for serverless-http
-export const handler = serverlessHttp(server);
+server.listen(8000);
