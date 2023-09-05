@@ -26,5 +26,5 @@ server.use(auth)
 server.use(middlewares)
 server.use(router)
 
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 3000;
 server.listen(port);
